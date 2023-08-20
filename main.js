@@ -23,6 +23,11 @@ ipcMain.handle('dark-mode:toggle', () => {
 
 ipcMain.handle('dark-mode:system', () => {
     nativeTheme.themeSource = 'system'
+    // if (nativeTheme.shouldUseDarkColors) {
+    //     nativeTheme.themeSource = 'light'
+    // } else {
+    //     nativeTheme.themeSource = 'dark'
+    // }
 })
 
 app.whenReady().then(() => {
